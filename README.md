@@ -13,6 +13,13 @@
 - 编辑 [playlist.txt](./playlist.txt) 文件，将视频的 url 添加到列表中
 - 等待 github action 执行成功，视频会出现在 [downloads](./downloads/) 目录
 
+## Roadmap
+
+- [x] 使用 GitHub Action 下载视频
+- [x] 从列表中下载多个视频
+- [ ] 自定义配置
+- [ ] CDN 加速
+
 ## License
 
 [github-actions-youtube-dl](https://github.com/justjavac/github-actions-youtube-dl) is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
