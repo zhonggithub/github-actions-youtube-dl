@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: download
+        run: |
+          wget https://yt-dl.org/downloads/latest/youtube-dl
+          chmod a+rx ./youtube-dl
+          ./youtube-dl --version
+          git config --local user.email "justjavac@gmail.com"
+          git config --local user.name "迷渡"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git pull --rebase
+          ./youtube-dl 'https://www.youtube.com/watch?v=z6wXBNFaTtE'
+          git commit -am "download youtube video"
+          git push
