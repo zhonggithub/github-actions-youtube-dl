@@ -11,8 +11,6 @@ jobs:
 
       - name: download
         run: |
-          wget https://yt-dl.org/downloads/latest/youtube-dl
-          chmod a+rx ./youtube-dl
           ./youtube-dl --version
           git config --local user.email "justjavac@gmail.com"
           git config --local user.name "迷渡"
