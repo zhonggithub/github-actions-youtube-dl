@@ -10,8 +10,8 @@
 
 - 点右上角 **Fork** 按钮复制本 GitHub 仓库
 - 在自己的项目中，点上方 **Actions** 选项卡进入项目 GitHub Actions 页面, 点击绿色按钮 “**I understand my workflows, go ahead and enable them**” 开启自动提交功能
-- 编辑 [playlist.txt](./playlist.txt) 文件，将视频的 id 添加到列表中
-- 等待 github action 执行成功，此时视频会出现在 [downloads](./downloads/) 目录
+- 编辑 [playlist.txt](./playlist.txt) 文件，将视频的 url 添加到列表中
+- 等待 github action 执行成功，视频会出现在 [downloads](./downloads/) 目录
 
 ## License
 
