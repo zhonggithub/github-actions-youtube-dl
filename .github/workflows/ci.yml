@@ -11,12 +11,11 @@ jobs:
 
       - name: download
         run: |
-          ./youtube-dl --version
           git config --local user.email "justjavac@gmail.com"
           git config --local user.name "迷渡"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          ./youtube-dl 'https://www.youtube.com/watch?v=z6wXBNFaTtE'
+          ./youtube-dl --batch-file='./playlist.txt'
           git add .
           git commit -m "download youtube video"
           git push
