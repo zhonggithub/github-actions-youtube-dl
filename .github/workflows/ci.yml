@@ -15,7 +15,7 @@ jobs:
           git config --local user.name "迷渡"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          ./youtube-dl -o "%(id)s.%(ext)s" --batch-file='./playlist.txt'
+          ./bin/youtube-dl -o "downloads/%(id)s.%(ext)s" --batch-file='./playlist.txt'
           git add .
           git commit -m "download youtube video"
           git push
